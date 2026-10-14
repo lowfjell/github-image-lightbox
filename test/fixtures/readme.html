@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>lowfjell/demo</title>
+  <style>
+    body { margin: 0; font: 14px/1.5 -apple-system, "Segoe UI", sans-serif; background: #0d1117; color: #e6edf3; }
+    .markdown-body { max-width: 880px; margin: 32px auto; padding: 32px; border: 1px solid #30363d; border-radius: 6px; }
+    img { max-width: 100%; }
+  </style>
+</head>
+<body>
+  <!-- Same markup GitHub renders for a readme: images it embeds link to themselves. -->
+  <article class="markdown-body entry-content container-lg" itemprop="text">
+    <h1>demo</h1>
+    <p>
+      <a href="#ci"><img src="https://github.com/lowfjell/demo/raw/main/badge.png" alt="CI status"></a>
+      <a target="_blank" rel="noopener noreferrer" href="https://github.com/lowfjell/demo/raw/main/badge.png"><img src="https://github.com/lowfjell/demo/raw/main/badge.png" alt="Build badge"></a>
+    </p>
+    <p><a target="_blank" rel="noopener noreferrer" href="/lowfjell/demo/blob/main/docs/shot-1.png"><img src="/lowfjell/demo/raw/main/docs/shot-1.png" alt="First screenshot" style="max-width: 100%;"></a></p>
+    <p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/4f1e/camo-2"><img src="https://camo.githubusercontent.com/4f1e/camo-2" alt="Second screenshot" style="max-width: 100%;"></a></p>
+    <p><a href="https://example.com/">A text link</a></p>
+    <p><a target="_blank" rel="noopener noreferrer" href="https://github.com/user-attachments/assets/asset-3"><img src="https://github.com/user-attachments/assets/asset-3" alt="Third screenshot" style="max-width: 100%;"></a></p>
+  </article>
+  <script>
+    // Stand-ins for GitHub's page scripts: they record what reached the page, then stop navigation.
+    window.pageKeydowns = 0;
+    document.addEventListener("keydown", () => { window.pageKeydowns++; });
+    document.addEventListener("click", (event) => {
+      window.lastClickPrevented = event.defaultPrevented;
+      event.preventDefault();
+    });
+  </script>
+</body>
+</html>

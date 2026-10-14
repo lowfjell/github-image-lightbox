@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>GitHub Image Lightbox options</title>
+  <style>
+    :root { color-scheme: light dark; }
+    body { margin: 0; padding: 16px 20px; min-width: 320px; font: 14px/1.5 system-ui, sans-serif; }
+    label { display: flex; gap: 10px; align-items: flex-start; margin: 0 0 12px; cursor: pointer; }
+    input { margin-top: 4px; }
+    small { display: block; opacity: 0.7; }
+    #status { min-height: 1.5em; margin: 0; opacity: 0.7; }
+  </style>
+</head>
+<body>
+  <label>
+    <input type="checkbox" id="wrap">
+    <span>Wrap around<small>Arrow keys go from the last image back to the first.</small></span>
+  </label>
+  <label>
+    <input type="checkbox" id="closeOnBackdrop">
+    <span>Click outside the image to close<small>Otherwise only Esc and the close button close it.</small></span>
+  </label>
+  <p id="status" role="status"></p>
+  <script src="options.js"></script>
+</body>
+</html>
